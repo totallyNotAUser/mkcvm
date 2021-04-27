@@ -8,7 +8,7 @@ install_odb_aur() {
 }
 
 build_serv() {
-    [[ "$packageman" == pacman ]] && install_odb_aur
+    [ "$packageman" == pacman ] && install_odb_aur
     cd serv
     git reset --hard 1.2.10
     chmod +x ./scripts/grab_deps_linux.sh
