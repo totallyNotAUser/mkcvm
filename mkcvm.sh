@@ -70,6 +70,11 @@ cd final
 cp ../serv/bin/* ./ -r
 cp ../webapp/build/* ./http -r
 
+echo '[*] Fixing chat sound in webapp'
+cd http
+mkdir collab-vm
+cp notify* collab-vm
+
 echo [*] Making start script
 cat > ~/cvm-start.sh << EOF
 cd ~/cvm/final
