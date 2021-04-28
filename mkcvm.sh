@@ -55,8 +55,8 @@ do
         -d|--distro)
                 distro_forced="yes"
                 case "$2" in
-                    ubu) distro="ubuntu"
-                    arch) distro="arch"
+                    ubu) distro="ubuntu";;
+                    arch) distro="arch";;
                     *) echo "Unknown/unsupported distro $2"; exit 1;;
                 esac
                 shift 2;;
