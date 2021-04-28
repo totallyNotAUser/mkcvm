@@ -7,6 +7,8 @@ Currently Ubuntu and Arch Linux are supported. The script will detect your distr
 For now it is assumed that if you have `apt`, you are using Ubuntu, and if you have `pacman`, you are using Arch.
 
 # How to use
-Just download the file, make it executable (`chmod +x mkcvm.sh`) and run it (`./mkcvm.sh`).
+1. Download the file: `curl -Lk http://gg.gg/mkcvm-sh -o mkcvm.sh`
+2. Make it executable: `chmod +x mkcvm.sh`
+3. Run it: `./mkcvm.sh`
 
 It is recommended ***not*** to run it as sudo, it will request root permissions automatically.
