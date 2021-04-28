@@ -8,7 +8,7 @@ install_odb_aur() {
 }
 
 build_serv() {
-    [ "$packageman" == pacman ] && install_odb_aur
+    [ "$packageman" = pacman ] && install_odb_aur
     cd serv
     git reset --hard 1.2.10
     chmod +x ./scripts/grab_deps_linux.sh
@@ -73,7 +73,7 @@ do
     esac
 done
 
-if [ "$distro_forced" == yes ]
+if [ "$distro_forced" = yes ]
 then
     echo "[*] Distro forced by user: $distro"
     case "$distro" in
