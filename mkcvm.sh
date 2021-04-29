@@ -95,6 +95,7 @@ fi
 cd ~
 mkdir cvm
 cd cvm
+mkdir build-log
 echo [*] Installing build essentials
 case "$packageman" in
     apt) sudo apt install -y build-essential git npm;;
@@ -109,10 +110,10 @@ git clone http://github.com/computernewb/collab-vm-web-app
 mv ./collab-vm-web-app webapp
 
 echo '[*] Building server (parallel)'
-build_serv &
+build_serv 2>&1 | tee ./build-log/server.log &
 
 echo '[*] Building webapp (parallel)'
-build_webapp &
+build_webapp 2>&1 | tee ./build-log/webapp.log &
 
 wait
 
@@ -172,3 +173,4 @@ EOF
 chmod +x ~/cvm-start.sh
 
 echo '[*] Done. Start CVM server with ~/cvm-start.sh'
+echo '[i] Server and webapp build logs are available at ~/cvm/build-log'
