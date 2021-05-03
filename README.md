@@ -8,7 +8,8 @@ For now it is assumed that if you have `apt`, you are using Ubuntu, and if you h
 
 # How to use
 1. Download the file: `curl -Lk http://gg.gg/mkcvm-sh -o mkcvm.sh`
-2. Make it executable: `chmod +x mkcvm.sh`
-3. Run it: `./mkcvm.sh`
+   **If gg.gg is blocked** (it is on ubuntu uservm) instead use: `curl -Lk http://tiny.cc/mkcvm -o mkcvm.sh`
+3. Make it executable: `chmod +x mkcvm.sh`
+4. Run it: `./mkcvm.sh`
 
 It is recommended ***not*** to run it as sudo, it will request root permissions automatically.
