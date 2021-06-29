@@ -162,7 +162,7 @@ do
     esac
 done
 cd ~/cvm/final
-nohup ./collab-vm-server 8080 &
+./collab-vm-server 8080 &
 # run tunnel
 case "\$tunnel_svc" in
     none) echo 'Running no tunneling service, as requested.';;
